@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        7- Sıfır –0 girilinceye kadar klavyeden okutulan değerlerin ortalamasını hesaplayıp ekrana yazan algoritmayı ve js kodunu
+        yazınız.
+    1.Başla
+    2.Bir sayi gir
+    3.eğer sayi 0'a eşitse ortalama değişkenine 0 ata 7. adıma git, değilse devam et
+    4.toplam değişkenini sayi ile topla toplam değişkenine ata
+    5.adet değişkenini 1 arttır ve 2. adıma git
+    6.ortalama = toplam / adet
+    7.Ortalama değeri ekrana yazdır
+    8.Bitir
+    -->
+
+    <script>
+    var toplam = 0;
+    var adet = 0;
+
+    while (true) {
+        var sayi = parseFloat(prompt("Bir sayı girin:"));
+        
+        if (sayi === 0) {
+            break;
+        }
+        toplam = toplam + sayi;
+        adet++;
+    }
+    var ortalama = adet > 0 ? toplam / adet : 0;
+
+    console.log("Girilen sayıların ortalaması: " + ortalama);
+    document.write("Girilen sayıların ortalaması: " + ortalama);
+    </script>
+    
+</body>
+</html>

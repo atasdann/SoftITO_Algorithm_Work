@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        3-Klavyeden girilen bir sayının tüm tam bölenlerini bulup listeleyen (Ekrana yazan) algoritmayı ve js kodlarını yazınız.
+    1.Başla
+    2. Bir N sayısı gir
+    3. Bir dizi oluştur
+    4. i < N ise N sayısını i'ye böl değilse 6. adıma git
+    5. Eğer kalan 0 ise sayıyı listeye ekle ve ilerle, değilse 1 arttır ve 4. adıma dön.
+    6. Listeyi konsola ve sayfaya yazdır
+    7. Bitir.
+
+    -->
+
+    <script>
+        var N = parseInt(prompt("Bir N sayısı girin: "));
+        var Array = [];
+        for (let i = 0; i < N; i++) {
+            if (N % i == 0) {
+                Array.push(i);
+            }
+        }
+        console.log(Array);
+        document.write(Array);
+
+    </script>
+    
+</body>
+</html>

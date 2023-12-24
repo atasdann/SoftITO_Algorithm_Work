@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        4-Klavyeden girilen üç sayıdan büyüklük sıralamasına göre ortadakini bulup ekrana yazan program için algoritmayı
+        ve js kodunu yazınız.
+    1.Başla
+    2.Klavyeden 3 adet sayı gir.(sayi1 sayi2 sayi3)
+    3.sayi1>sayi2 ise devam et değilse adım 5'e git
+    4.sayi2>sayi3 ise sayi2 ortancadır.Değilse sayi1 ve sayi3'den küçük olan ortancadır
+    5.sayi1>sayi3 ise sayi1 ortancadır,değilse sayi2 ve sayi3'den küçük olan ortancadır 
+    -->
+
+    <script>
+
+    var sayi1 = parseInt(prompt("Birinci sayıyı girin: "));
+    var sayi2 = parseInt(prompt("İkinci sayıyı girin: "));
+    var sayi3 = parseInt(prompt("Üçüncü sayıyı girin: "));
+
+    if (sayi1 > sayi2) {
+            if (sayi2 > sayi3) {
+                console.log("Ortadaki sayı: " + sayi2);
+                document.write("Ortadaki sayı: " + sayi2);
+            } else if (sayi1 > sayi3) {
+                console.log("Ortadaki sayı: " + sayi3);
+                document.write("Ortadaki sayı: " + sayi3);
+            } else {
+                console.log("Ortadaki sayı: " + sayi1);
+                document.write("Ortadaki sayı: " + sayi1);
+            }
+
+    } else {
+            if (sayi1 > sayi3) {
+                console.log("Ortadaki sayı: " + sayi1);
+                document.write("Ortadaki sayı: " + sayi1);
+                
+            } else if (sayi2 > sayi3) {
+                console.log("Ortadaki sayı: " + sayi3);
+                document.write("Ortadaki sayı: " + sayi3);
+            } else {
+                console.log("Ortadaki sayı: " + sayi2);
+                document.write("Ortadaki sayı: " + sayi2);
+            }
+    }
+
+    </script>
+    
+</body>
+</html>

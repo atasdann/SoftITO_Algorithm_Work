@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    2-Klavyeden girilecek bir N değerine kadar fibonecci dizisini bulan algoritmayı ve js kodunu yazını. Fibonecci dizisi 1 1 değerleri
+    ile başlar ve yeni değer kendinden öndeki iki değerin toplamı olarak bulunur. (1 1 2 3 5 8 13 21...)
+
+            Kod fonksiyon olarak tanımlandı...
+    1. Başla
+    2. Klavyeden bir bitiş ( N ) değeri gir.
+    3. fibomacciArray dizisi olurştur, başlangıç oalrak 0,1 değerlerini ver.
+    3. Dizinin son elemanı + Dizinin sondan bir önceki elemanı <= N ise bu iki sayının toplamını diziye ekle.
+    4. Bitir
+
+
+    -->
+
+    <script>
+
+            function fibonacci(N) {
+            var fibonacciArray = [0, 1];
+
+            while (fibonacciArray[fibonacciArray.length - 1] + fibonacciArray[fibonacciArray.length - 2] <= N)
+            {
+                fibonacciArray.push(fibonacciArray[fibonacciArray.length - 1] + fibonacciArray[fibonacciArray.length - 2]);
+            }
+
+            return fibonacciArray;
+            }
+
+            var N = parseInt(prompt("Bir N sayısı girin: "));
+            var result = fibonacci(N);
+
+            console.log(result);
+            document.writeln(result);
+
+    </script>
+    
+</body>
+</html>
