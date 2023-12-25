@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        6-Klavyeden girilen A ve B gibi iki sayıyı, çarpma işlemi kullanmadan sadece toplama ve çıkarma kullanarak çarpıp sonucu
+        ekrana yazan algoritmayı ve js kodunu yazınız.
+    1. Basla
+    2. Birinci (A) ve İkinci(B) sayiyi girin
+    3. isNegative değişkenine A ve B nin sadece ikisinden birinin negatif olması durumunda negatif olacağını tanımla
+    4. A ve B'nin mutlak değerini al.
+    5. carpim değişkenini tanımla ve başlangıç değeri olarak 0 ata.
+    6.carpim değişkenine B'yi ekle ve yeni carpim'a ata. Bunu A sayisi adedince tekrarla
+    7. isNegative true ise carpim değişkeninin işaretini değiştir
+    8. carpim değerini döndür.
+    9. Ekrana ve konsola result'ı yazdır.
+    10. Bitir
+
+    -->
+
+    <script>
+        var A = parseInt(prompt("Birinci sayiyi giriniz (A): "));
+        var B = parseInt(prompt("İkinci sayiyi giriniz (B): "));
+
+        function Multiplication(A,B) {
+            var isNegative = (A < 0 && B > 0) || (A > 0 && B < 0);
+            // Mutlak Değerleri alındı
+            A = Math.abs(A);
+            B = Math.abs(B);
+
+            var carpim = 0;
+
+            for (let i = 0; i < A; i++) {
+                carpim = carpim + B
+            }
+
+            // Sayıların negatif olması durumu
+            if (isNegative) {
+                carpim = -carpim;
+            }
+            return carpim;
+        }
+
+        var result = Multiplication(A, B);
+        console.log("Result: " +result);
+        document.write("Result:" +result);
+
+    </script>
+
+    </script>
+    
+</body>
+</html>

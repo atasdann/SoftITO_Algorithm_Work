@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        5-Klavyeden girilen A ve B gibi iki sayının bölme işlemi kullanmadan sadece toplama ve çıkarma kullanarak kalanlı bölme yapan
+        algoritmayı ve js kodunu yazınız.
+    1. Basla
+    2. Klavyeden Bölünen (A) ve bölen (B) değerleri gir
+    3. isNegative değişkenine iki sayının bölümünün negatif olma durumunu ata
+    4. A ve B'nin mutlak değerlerini al
+    5. remainder (kalan) değişkenini tanımla ve 0 değerini ata
+    6. A>=B olduğu sürece A'dan B'yi çıkar ve A'ya ata ve bu değeri kalan(remainder) değişkenine ata. BunuA>=B olduğu sürece devam ettir.
+    7. isNegative true ise remainder(kalan) değişkenini negatif yap değilse devam et
+    8. remainder değişkenini döndür
+    9.Bitir.
+
+    -->
+
+    <script>
+        var A = parseInt(prompt("Bölünen sayiyi giriniz (A): "));
+        var B = parseInt(prompt("Bölen sayiyi giriniz (B): "));
+
+        function Division(A,B) {
+            var isNegative = (A < 0 && B > 0) || (A > 0 && B < 0);
+            // Mutlak Değerleri alındı
+            A = Math.abs(A);
+            B = Math.abs(B);
+
+            var remainder = 0;
+            while (A >= B) {
+                A = A - B;
+                remainder = A;
+            }
+            // Sayıların negatif olması durumu
+            if (isNegative) {
+                remainder = -remainder;
+            }
+            return remainder;
+        }
+
+        var result = Division(A, B);
+        console.log("Result: " + result);
+    </script>
+    
+</body>
+</html>

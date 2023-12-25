@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        8-Klavyeden girilecek 20 sayının tek olanlarını ayrı çift olanlarını ayrı toplayıp sonuçları ekrana yazan algoritmayı ve
+        js kodunu yazınız.
+
+    1.Başla
+    2.çift sayılar ve tek sayılar için boş birer dizi tanımla
+    3.Bir sayı gir.
+    4.i=1
+    5.Sayının 2'ye bölümünden kalan 0 ise çift sayılar dizisine, değilse tek sayılar dizisine gönder.
+    6.i++
+    7.i<21 ise 4. adıma git, değilse 8. adıma devam et.
+    8.Konsola ve sayfaya Tek sayılar dizisini (arrayOdd) ve çift sayılar dizisini (arrayEven) yazdır
+    9.Bitir
+
+    -->
+
+    <script>
+        var arrayEven = [];
+        var arrayOdd = [];
+
+        for (let i = 1; i < 21; i++) {
+            let sayi=parseInt(prompt("Bir sayi giriniz:"));
+            if (sayi % 2 ==0) {
+                arrayEven.push(sayi);
+            }else arrayOdd.push(sayi);
+        }
+        console.log(arrayOdd);
+        document.write("Tek Sayilar: " +arrayOdd);
+        console.log(arrayEven);
+        document.write("Cift Sayilar: "+arrayEven);
+        
+    </script>
+    
+</body>
+</html>

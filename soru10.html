@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        10-Klavyeden girilecek bir sayının tek mi çift mi olduğunu bulabilecek bir algoritmayı ve js kodunu yazınız. Bu algoritmayı
+        geliştirirken başvurduğunuz varsayımları da yazınız.
+    1. Başla
+    2. Bir sayı giriniz.
+    3. Sayının 2'ye bölümünden kalan 0 ise sayıyı arrayEven dizisine, değilse arrayOdd dizisine gönder.
+    4.Değerleri konsola yazdır
+    5.Bitir
+        Çift sayıların 2'ye bölümünden kalan 0'dır. Eğer bir sayının 2'ye bölümünden kalan 0'sa o sayı çift sayıdır ve direkt çift 
+        sayılar dizisine gönderilebilir. Tek sayı olup olmadığını sorgulamak için ikinci bir şarta gerek yoktur, çünkü sayı çift 
+        değilse tektir. Yani 2'ye bölümünden kalan 0 değilse sayı tek sayılar dizisine gönderilir.
+
+    -->
+
+    <script>
+        var sayi = parseInt(prompt("Bir sayı giriniz:"));
+
+        var arrayEven=[];
+        var arrayOdd=[];
+
+        if (sayi % 2 ==0) {
+            arrayEven.push(sayi);
+            console.log("Cift sayi: " +arrayEven);
+            document.write("Çift sayı: " +arrayEven);
+        }
+        else{arrayOdd.push(sayi);
+            console.log("Tek Sayi: " +arrayOdd);
+            document.write("Tek sayı: " +arrayOdd)
+
+        }
+    </script>
+    
+</body>
+</html>
